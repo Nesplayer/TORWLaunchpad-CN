@@ -20,7 +20,7 @@ using MiraAPI.Hud;
 using MiraAPI.Modifiers;
 using MiraAPI.Roles;
 
-namespace LaunchpadReloaded;
+namespace LaunchpadReloaded.Events;
 
 public static class GenericEvents
 {
