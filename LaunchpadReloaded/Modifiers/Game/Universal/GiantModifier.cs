@@ -1,4 +1,7 @@
 ﻿using LaunchpadReloaded.Options.Modifiers;
+using LaunchpadReloaded.Features;
+using MiraAPI.Utilities.Assets;
+using UnityEngine;
 using MiraAPI.GameOptions;
 using MiraAPI.Modifiers;
 
@@ -7,6 +10,7 @@ namespace LaunchpadReloaded.Modifiers.Game.Universal;
 public sealed class GiantModifier : LPModifier
 {
     public override string ModifierName => "Giant";
+    public override LoadableAsset<Sprite>? ModifierIcon => LaunchpadAssets.GiantIcon;
     public override string GetDescription() => "You are larger than\nthe average player.";
     public override int GetAssignmentChance() => (int)OptionGroupSingleton<UniversalModifierOptions>.Instance.GiantChance;
     public override int GetAmountPerGame() => 1;

@@ -12,7 +12,7 @@ public sealed class GravityModifier : LPModifier
     public override string ModifierName => "Gravity Field";
     public override string GetDescription() => "You slow down players near you.";
     public override int GetAssignmentChance() => (int)OptionGroupSingleton<UniversalModifierOptions>.Instance.GravityChance;
-    public override int GetAmountPerGame() => 1;
+    public override int GetAmountPerGame() => (int)OptionGroupSingleton<GravityFieldOptions>.Instance.GravityAmount;
 
     private GameObject? detectionCircle;
 

@@ -31,7 +31,7 @@ public static class LaunchpadAssets
     public static readonly LoadableAsset<Sprite> TraitorIcon = new LoadableResourceAsset("TORWLaunchpad.Resources.Traitor.png");
     public static readonly LoadableAsset<Sprite> TeleportButton = new LoadableResourceAsset("TORWLaunchpad.Resources.TeleportButton.png");
     public static readonly LoadableAsset<Sprite> KillButton = new LoadableResourceAsset("TORWLaunchpad.Resources.Kill.png");
-    public static readonly LoadableAsset<Sprite> AuAvengersSprite = new LoadableResourceAsset("TORWLaunchpad.Resources.AuAvengers.png", 290);
+    public static readonly LoadableAsset<Sprite> NewsIcon = new LoadableResourceAsset("TORWLaunchpad.Resources.NewsIcon.png", 290);
     public static readonly LoadableAsset<Sprite> ReviveButton = new LoadableBundleAsset<Sprite>("Revive.png", Bundle);
     public static readonly LoadableAsset<Sprite> ShootButton = new LoadableBundleAsset<Sprite>("Shoot.png", Bundle);
     public static readonly LoadableAsset<Sprite> ZoomButton = new LoadableBundleAsset<Sprite>("Zoom.png", Bundle);
@@ -44,6 +44,20 @@ public static class LaunchpadAssets
 
     public static readonly LoadableAsset<Sprite> NotepadSprite = new LoadableBundleAsset<Sprite>("NotepadButton.png", Bundle);
     public static readonly LoadableAsset<Sprite> NotepadActiveSprite = new LoadableBundleAsset<Sprite>("NotepadButtonActive.png", Bundle);
+    
+    // Modifier Icons
+    public static readonly LoadableAsset<Sprite> BaitIcon = new LoadableResourceAsset("TORWLaunchpad.Resources.Bait.png");
+    public static readonly LoadableAsset<Sprite> FlashIcon = new LoadableResourceAsset("TORWLaunchpad.Resources.Flash.png");
+    public static readonly LoadableAsset<Sprite> MiniIcon = new LoadableResourceAsset("TORWLaunchpad.Resources.Mini.png");
+    public static readonly LoadableAsset<Sprite> GiantIcon = new LoadableResourceAsset("TORWLaunchpad.Resources.Giant.png");
+    public static readonly LoadableAsset<Sprite> VIPIcon = new LoadableResourceAsset("TORWLaunchpad.Resources.NewsIcon.png");
+    public static readonly LoadableAsset<Sprite> TorchIcon = new LoadableResourceAsset("TORWLaunchpad.Resources.Torch.png");
+    
+    // Universal Icons
+    public static readonly LoadableAsset<Sprite> MayorIcon = new LoadableResourceAsset("TORWLaunchpad.Resources.Mayor.png");
+    
+    // Role Icons
+    public static readonly LoadableAsset<Sprite> DetectiveIcon = new LoadableResourceAsset("TORWLaunchpad.Resources.Detective.png");
 
     // Banner Sprites
     public static readonly LoadableAsset<Sprite> CaptainBanner = new LoadableBundleAsset<Sprite>("CaptainBanner.png", Bundle);

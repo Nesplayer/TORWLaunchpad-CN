@@ -38,7 +38,7 @@ public static class DiscordManagerPatch
     [HarmonyPatch(typeof(ActivityManager), nameof(ActivityManager.UpdateActivity))]
     public static void ActivityManagerUpdateActivityPrefix(ActivityManager __instance, [HarmonyArgument(0)] Activity activity)
     {
-        activity.Details += " Among Us Modded (TOR-W: L)";
-        activity.State += " | dsc.gg/tor-w";
+        activity.Details += " ";
+        activity.State += " ";
     }
 }

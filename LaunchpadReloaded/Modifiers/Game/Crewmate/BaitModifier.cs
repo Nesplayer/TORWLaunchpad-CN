@@ -1,24 +1,30 @@
-﻿using LaunchpadReloaded.Options.Modifiers;
+﻿using LaunchpadReloaded.Features;
+using LaunchpadReloaded.Options.Modifiers;
+using LaunchpadReloaded.Options.Modifiers.Crewmate;
+using MiraAPI.Utilities.Assets;
 using MiraAPI.Events;
 using MiraAPI.Events.Vanilla.Gameplay;
 using MiraAPI.GameOptions;
 using MiraAPI.Modifiers;
 using MiraAPI.Modifiers.Types;
+using UnityEngine;
 
 namespace LaunchpadReloaded.Modifiers;
 
 public class BaitModifier : GameModifier
 {
     public override string ModifierName => "Bait";
+    
+    public override LoadableAsset<Sprite>? ModifierIcon => LaunchpadAssets.BaitIcon;
 
     public override int GetAmountPerGame()
     {
-        return (int)OptionGroupSingleton<BaitModifierOptions>.Instance.Amount;
+        return (int)OptionGroupSingleton<BaitOptions>.Instance.BaitAmount;
     }
 
     public override int GetAssignmentChance()
     {
-        return (int)OptionGroupSingleton<BaitModifierOptions>.Instance.BaitChance;
+        return (int)OptionGroupSingleton<CrewmateModifierOptions>.Instance.BaitChance;
     }
 
     public override string GetDescription()

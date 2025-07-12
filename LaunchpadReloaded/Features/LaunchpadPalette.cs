@@ -34,9 +34,17 @@ public static class LaunchpadPalette
     public static readonly Color TargetColor = new Color32(6, 156, 131, 255);
     public static readonly Color ExeTargetColor = new Color32(3, 255, 15, 255);
     
-    // Options Menu
-    public static readonly Color BaitMenu = new Color32(11, 223, 56, 255);
+    // Options Menus
     public static readonly Color CrewMenu = new Color32(100, 212, 218, 255);
     public static readonly Color LpMenu = new Color32(192, 65, 204, 255);
     public static readonly Color UniversalMenu = new Color32(36, 154, 248, 255);
+    public static readonly Color KingMenu = new Color32(255, 215, 0, 255);
+    public static readonly Color SmolMenu = new Color32(0, 255, 200, 255);
+    public static readonly Color GravityMenu = new Color32(255, 0, 170, 255);
+    public static readonly Color FlashMenu = new Color32(255, 255, 60, 255);
+    public static readonly Color GiantMenu = new Color32(255, 90, 0, 255);
+    public static readonly Color VendettaMenu = new Color32(255, 0, 80, 255);
+    public static readonly Color TorchMenu = new Color32(255, 50, 0, 255);
+    public static readonly Color MayorMenu = new Color32(245, 255, 255, 255);
+    public static readonly Color BaitMenu = new Color32(11, 223, 56, 255);
 }

@@ -1,5 +1,8 @@
 ﻿using LaunchpadReloaded.Options.Modifiers;
 using LaunchpadReloaded.Options.Modifiers.Crewmate;
+using LaunchpadReloaded.Features;
+using MiraAPI.Utilities.Assets;
+using UnityEngine;
 using MiraAPI.GameOptions;
 using MiraAPI.Utilities;
 
@@ -8,11 +11,12 @@ namespace LaunchpadReloaded.Modifiers.Game.Crewmate;
 public sealed class MayorModifier : LPModifier
 {
     public override string ModifierName => "Mayor";
+    public override LoadableAsset<Sprite>? ModifierIcon => LaunchpadAssets.MayorIcon;
     public override string GetDescription() =>
-        $"You have an additional \n{OptionGroupSingleton<MayorOptions>.Instance.ExtraVotes} votes every meeting.";
+        $"You have an additional {OptionGroupSingleton<MayorOptions>.Instance.ExtraVotes} votes every meeting.";
 
     public override int GetAssignmentChance() => (int)OptionGroupSingleton<CrewmateModifierOptions>.Instance.MayorChance;
-    public override int GetAmountPerGame() => 1;
+    public override int GetAmountPerGame() => (int)OptionGroupSingleton<MayorOptions>.Instance.MayorAmount;
 
     public override void OnMeetingStart()
     {

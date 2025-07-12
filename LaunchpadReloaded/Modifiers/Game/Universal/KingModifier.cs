@@ -1,15 +1,19 @@
 ﻿using LaunchpadReloaded.Components;
+using LaunchpadReloaded.Options.Modifiers.Universal;
 using LaunchpadReloaded.Options.Modifiers;
-using MiraAPI.GameOptions;
+using LaunchpadReloaded.Features;
+using MiraAPI.Utilities.Assets;
 using UnityEngine;
+using MiraAPI.GameOptions;
 
-namespace LaunchpadReloaded.Modifiers.Fun;
+namespace LaunchpadReloaded.Modifiers.Game.Universal;
 
 public sealed class KingModifier : LPModifier
 {
     public override string ModifierName => "V.I.P";
+    public override LoadableAsset<Sprite>? ModifierIcon => LaunchpadAssets.VIPIcon;
     public override int GetAssignmentChance() => (int)OptionGroupSingleton<UniversalModifierOptions>.Instance.KingChance;
-    public override int GetAmountPerGame() => 1;
+    public override int GetAmountPerGame() => (int)OptionGroupSingleton<KingOptions>.Instance.KingAmount;
 
     public override string GetDescription()
     {

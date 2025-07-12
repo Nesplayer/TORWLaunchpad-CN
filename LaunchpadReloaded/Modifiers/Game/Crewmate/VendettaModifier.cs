@@ -22,7 +22,7 @@ public sealed class VendettaModifier : LPModifier
         $"If they vote you in the next meeting,\nthey will die in the next round.";
 
     public override int GetAssignmentChance() => (int)OptionGroupSingleton<CrewmateModifierOptions>.Instance.VendettaChance;
-    public override int GetAmountPerGame() => 1;
+    public override int GetAmountPerGame() => (int)OptionGroupSingleton<VendettaOptions>.Instance.VendettaAmount;
 
     public override void OnActivate()
     {
