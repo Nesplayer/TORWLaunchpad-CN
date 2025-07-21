@@ -126,6 +126,31 @@
         "\n★ Giant modifier making player go out of boundaries when climbing up ladders.",
         "\n\n♦♦ Thank you for downloading and playing TOR-W: L! ♦♦"
       ]
+    },
+    {
+      "Date": "2025-07-21T12:50:00Z",
+      "Number": "100007",
+      "ShortTitle": "★ TOR-W: L Dev-3 ★",
+      "SubTitle": "Dev-3 Updates",
+      "Title": "TOR-W: Launchpad v1.2.0 Dev-3",
+      "Text": [
+        "\rThis is <b>NOT</b> the final changelogs for v1.2.0!!! Just some stuff I added/fixed in Dev-3.",
+        "\n\n<b>└ Added ┐</b>:",
+        "\n★ Added Dark Fairy (WIP) - 80% done.",
+        "\n\n<b>└ Planned ┐</b>:",
+        "\n★ In-Game Wiki (Idea from Town Of Us: Mira).",
+        "\n★ TOR-W: L Launcher (Idea from All Of Us server) - 60% done.",
+        "\n★ Auto-Posting Codes (Idea from EHR [Host Only mod]).",
+        "\n★ Translations (Idea given from @WanderingPix) - 40% done.",
+        "\n\n<b>└ Planned For Dev-4 ┐</b>:",
+        "\n★ Colored buttons (In the QOL UI).",
+        "\n★ Colored buttons (In the roles selecting menu).",
+        "\n\n<b>└ Bugs ┐</b>:",
+        "\n★ Hacker role not letting players un-hack nodes (almost fixed).",
+        "\n★ Players getting flagged and kicked for cheating.",
+        "\n★ Giant modifier making player go out of boundaries when climbing up ladders.",
+        "\n\n♦♦ Thank you for downloading and playing TOR-W: L! ♦♦"
+      ]
     }
   ]
 }
