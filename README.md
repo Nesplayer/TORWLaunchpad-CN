@@ -1,15 +1,15 @@
-<h1 align="center">🚀 Launchpad: Reloaded</h1>
+<h1 align="center">🚀 TOR-W: Launchpad</h1>
 <p align="center">
-  <img src="LaunchpadBanner.png" alt="Cover" width="60%" height="60%"/>
+  <img src="https://torw-official.netlify.app/assets/logo-8DovvFMl.png" alt="Cover" width="60%" height="60%"/>
   <br><br>
-  <a href="https://discord.gg/FYYqJU2bvp" target="_blank"><img src="https://dcbadge.limes.pink/api/server/FYYqJU2bvp"/></a>
+  <a href="https://discord.gg/ZAyjN2PbuK" target="_blank"><img src="https://dcbadge.limes.pink/api/server/ZAyjN2PbuK"/></a>
 </p>
 
 # ❔ About Us
 Launchpad is a mod for Among Us that adds in brand new roles, features, and gamemodes! It is designed so that the roles and features stay somewhat consistent with the original game and don't feel out of place!
 
 ## 🌟 Features
-You can read about all of the features on the [wiki](https://launchpad.xtracube.dev/), but here are a couple of them:
+Here are a couple of them:
 
 - ✅ Gradient Colors
 - ✅ Special Voting Modes
@@ -18,13 +18,13 @@ You can read about all of the features on the [wiki](https://launchpad.xtracube.
 - ✅ Exciting Gamemodes
 
 ## 🔧 Compatibility
-- ✔️ Supports 2025.3.25 (16.0.0) on PC (Android support coming soon™).
-- ❗️ Launchpad is **NOT** a host-only mod. Every player needs to install it to enjoy.
-- 🔒 Launchpad does **NOT** work on normal Among Us servers. We host our own private game servers instead.
+- ✔️ Supports 2025.6.10 (16.1.0) on PC (Android support coming soon™).
+- ❗️ TOR-W: Launchpad is **NOT** a host-only mod. Every player needs to install it to enjoy.
+- 🔒 TOR-W: Launchpad does **NOT** work on normal Among Us servers. We host our own private game servers instead, or use [Modded/Niko](https://tohe.weareten.ca/servers.html#on-windows) regions.
 
 ## 📥 Installation
 
-- 🚀 Download the latest version using the Launcher app (available in our [Discord](https://discord.gg/FYYqJU2bvp) server).
+- 🚀 Download the latest version using the Launcher app (available on our [GitHub](), soon!).
 - 🛠️ For manual installation, you must also download:
   
   - Unity.Il2Cpp win-x86 BepInEx build
