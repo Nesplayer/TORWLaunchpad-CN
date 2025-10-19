@@ -24,7 +24,7 @@ public class RoleBlockedModifier : TimedModifier
     {
         if (Player == PlayerControl.LocalPlayer)
         {
-            Coroutines.Start(DoAnimation(true));
+            Coroutines.Start(coroutine: DoAnimation(true));
             PlayerControl.LocalPlayer.cosmetics.SetOutline(true, new Il2CppSystem.Nullable<Color>(new Color(1f, 0f, 1f, 1f)));
         }
     }

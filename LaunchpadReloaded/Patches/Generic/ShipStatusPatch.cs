@@ -19,18 +19,6 @@ public static class ShipStatusPatch
     {
         var nodesParent = new GameObject("Nodes");
         nodesParent.transform.SetParent(__instance.transform);
-
-        var nodePositions = HackerUtilities.MapNodePositions[__instance.Type];
-        if (__instance.TryCast<AirshipStatus>())
-        {
-            nodePositions = HackerUtilities.AirshipPositions;
-        }
-
-        for (var i = 0; i < nodePositions.Length; i++)
-        {
-            var nodePos = nodePositions[i];
-            __instance.CreateNode(i, nodesParent.transform, nodePos);
-        }
     }
 
     [HarmonyPrefix]

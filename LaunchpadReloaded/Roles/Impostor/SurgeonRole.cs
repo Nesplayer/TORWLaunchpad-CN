@@ -16,6 +16,9 @@ public class SurgeonRole(IntPtr ptr) : ImpostorRole(ptr), IImpostorRole
     {
         Icon = LaunchpadAssets.DissectButton,
         UseVanillaKillButton = false,
-        OptionsScreenshot = LaunchpadAssets.SurgeonBanner,
     };
+    public override void SpawnTaskHeader(PlayerControl playerControl)
+    {
+        playerControl.SpawnImpostorTaskHeader();
+    }
 }

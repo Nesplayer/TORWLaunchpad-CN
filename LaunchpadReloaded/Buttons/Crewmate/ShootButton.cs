@@ -5,7 +5,9 @@ using LaunchpadReloaded.Roles.Crewmate;
 using MiraAPI.GameOptions;
 using MiraAPI.Networking;
 using MiraAPI.Utilities;
+using MiraAPI.Keybinds;
 using MiraAPI.Utilities.Assets;
+using Rewired;
 using UnityEngine;
 
 namespace LaunchpadReloaded.Buttons.Crewmate;
@@ -21,6 +23,14 @@ public class ShootButton : BaseLaunchpadButton<PlayerControl>
     public override bool AffectedByHack => true;
 
     public override bool Enabled(RoleBehaviour? role) => role is SheriffRole;
+
+    public override void CreateButton(Transform parent)
+    {
+        base.CreateButton(parent);
+
+        Button!.usesRemainingSprite.sprite = LaunchpadAssets.Player.LoadAsset();
+        Button!.usesRemainingSprite.color = LaunchpadPalette.SheriffColor;
+    }
 
     public override PlayerControl? GetTarget()
     {

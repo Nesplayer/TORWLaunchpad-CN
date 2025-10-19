@@ -68,10 +68,6 @@ public static class MeetingHudPatches
     [HarmonyPatch(nameof(MeetingHud.Update))]
     public static void UpdatePatch(MeetingHud __instance)
     {
-        if (HackerUtilities.AnyPlayerHacked())
-        {
-            HackerUtilities.ForceEndHack();
-        }
 
         var voteData = PlayerControl.LocalPlayer.GetVoteData();
         if (voteData == null || _typeText == null)

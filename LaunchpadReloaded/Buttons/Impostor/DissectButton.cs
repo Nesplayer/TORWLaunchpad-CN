@@ -6,6 +6,8 @@ using LaunchpadReloaded.Utilities;
 using MiraAPI.GameOptions;
 using MiraAPI.Utilities;
 using MiraAPI.Utilities.Assets;
+using MiraAPI.Keybinds;
+using Rewired;
 using UnityEngine;
 using Helpers = MiraAPI.Utilities.Helpers;
 
@@ -21,9 +23,19 @@ public class DissectButton : BaseLaunchpadButton<DeadBody>
     public override bool TimerAffectedByPlayer => true;
     public override bool AffectedByHack => false;
 
+    public override BaseKeybind Keybind => MiraGlobalKeybinds.SecondaryAbility;
+
     public override bool Enabled(RoleBehaviour? role)
     {
         return role is SurgeonRole;
+    }
+
+    public override void CreateButton(Transform parent)
+    {
+        base.CreateButton(parent);
+
+        Button!.usesRemainingSprite.sprite = LaunchpadAssets.Body.LoadAsset();
+        Button!.usesRemainingSprite.color = LaunchpadPalette.SurgeonColor;
     }
 
     public override DeadBody? GetTarget()

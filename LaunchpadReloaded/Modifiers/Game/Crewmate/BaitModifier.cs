@@ -14,8 +14,8 @@ namespace LaunchpadReloaded.Modifiers;
 public class BaitModifier : GameModifier
 {
     public override string ModifierName => "Bait";
-    
     public override LoadableAsset<Sprite>? ModifierIcon => LaunchpadAssets.BaitIcon;
+    public override Color FreeplayFileColor => new Color32(77, 166, 255, 255);
 
     public override int GetAmountPerGame()
     {

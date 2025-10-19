@@ -17,11 +17,15 @@ public class SwapshifterRole(IntPtr ptr) : ImpostorRole(ptr), IImpostorRole
     public CustomRoleConfiguration Configuration => new(this)
     {
         Icon = LaunchpadAssets.SwapButton,
-        OptionsScreenshot = LaunchpadAssets.HackerBanner,
     };
     public override void OnDeath(DeathReason reason)
     {
         Deinitialize(Player);
+    }
+    
+    public override void SpawnTaskHeader(PlayerControl playerControl)
+    {
+        playerControl.SpawnImpostorTaskHeader();
     }
 
     public override void Deinitialize(PlayerControl targetPlayer)

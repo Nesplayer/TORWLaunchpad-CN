@@ -15,6 +15,9 @@ public class MedicRole(IntPtr ptr) : CrewmateRole(ptr), ICrewmateRole
     public CustomRoleConfiguration Configuration => new(this)
     {
         Icon = LaunchpadAssets.ReviveButton,
-        OptionsScreenshot = LaunchpadAssets.MedicBanner,
     };
+    public override void SpawnTaskHeader(PlayerControl playerControl)
+        {
+            playerControl.SpawnCrewmateTaskHeader();
+        }
 }

@@ -11,6 +11,7 @@ namespace LaunchpadReloaded.Modifiers.Game.Universal;
 public sealed class KingModifier : LPModifier
 {
     public override string ModifierName => "V.I.P";
+    public override Color FreeplayFileColor => new Color32(255, 215, 0, 255);
     public override LoadableAsset<Sprite>? ModifierIcon => LaunchpadAssets.VIPIcon;
     public override int GetAssignmentChance() => (int)OptionGroupSingleton<UniversalModifierOptions>.Instance.KingChance;
     public override int GetAmountPerGame() => (int)OptionGroupSingleton<KingOptions>.Instance.KingAmount;

@@ -24,7 +24,6 @@ public class JesterRole(System.IntPtr ptr) : RoleBehaviour(ptr), INeutralRole
         CanUseVent = OptionGroupSingleton<JesterOptions>.Instance.CanUseVents,
         GhostRole = (RoleTypes)RoleId.Get<OutcastGhostRole>(),
         Icon = LaunchpadAssets.JesterIcon,
-        OptionsScreenshot = LaunchpadAssets.JesterBanner,
     };
 
     public override void AppendTaskHint(StringBuilder taskStringBuilder)

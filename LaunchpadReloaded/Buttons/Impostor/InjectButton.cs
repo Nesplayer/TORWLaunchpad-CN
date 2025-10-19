@@ -9,6 +9,8 @@ using MiraAPI.Modifiers;
 using MiraAPI.Networking;
 using MiraAPI.Utilities;
 using MiraAPI.Utilities.Assets;
+using MiraAPI.Keybinds;
+using Rewired;
 using UnityEngine;
 
 namespace LaunchpadReloaded.Buttons.Impostor;
@@ -24,6 +26,14 @@ public class InjectButton : BaseLaunchpadButton<PlayerControl>
     public override bool AffectedByHack => false;
 
     public override bool Enabled(RoleBehaviour? role) => role is SurgeonRole;
+
+    public override void CreateButton(Transform parent)
+    {
+        base.CreateButton(parent);
+
+        Button!.usesRemainingSprite.sprite = LaunchpadAssets.Player.LoadAsset();
+        Button!.usesRemainingSprite.color = LaunchpadPalette.SurgeonColor;
+    }
 
     private PlayerControl? _injectedPlayer;
 

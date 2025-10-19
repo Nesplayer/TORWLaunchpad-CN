@@ -5,7 +5,9 @@ using LaunchpadReloaded.Roles.Crewmate;
 using LaunchpadReloaded.Utilities;
 using MiraAPI.GameOptions;
 using MiraAPI.Utilities;
+using MiraAPI.Keybinds;
 using MiraAPI.Utilities.Assets;
+using Rewired;
 using UnityEngine;
 using Helpers = MiraAPI.Utilities.Helpers;
 
@@ -25,6 +27,14 @@ public class SealButton : BaseLaunchpadButton<Vent>
     public override bool Enabled(RoleBehaviour? role)
     {
         return role is SealerRole;
+    }
+
+    public override void CreateButton(Transform parent)
+    {
+        base.CreateButton(parent);
+
+        Button!.usesRemainingSprite.sprite = LaunchpadAssets.Vent.LoadAsset();
+        Button!.usesRemainingSprite.color = LaunchpadPalette.SealerColor;
     }
 
     public override Vent? GetTarget()

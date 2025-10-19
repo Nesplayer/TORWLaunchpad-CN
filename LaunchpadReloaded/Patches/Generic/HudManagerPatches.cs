@@ -33,24 +33,10 @@ public static class HudManagerPatches
     public static void UpdatePostfix(HudManager __instance)
     {
         var local = PlayerControl.LocalPlayer;
-        if (!local || MeetingHud.Instance)
-        {
-            if (CustomButtonSingleton<ZoomButton>.Instance.EffectActive)
-            {
-                CustomButtonSingleton<ZoomButton>.Instance.OnEffectEnd();
-            }
-
-            return;
-        }
 
         if (AmongUsClient.Instance.GameState != InnerNetClient.GameStates.Started && !ShipStatus.Instance)
         {
             return;
-        }
-
-        if (HackerUtilities.AnyPlayerHacked())
-        {
-            __instance.ReportButton.SetActive(false);
         }
     }
 }

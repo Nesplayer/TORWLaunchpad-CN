@@ -13,6 +13,7 @@ public class BurstModifier : LPModifier
 {
     public override string ModifierName => "Burst";
     public override LoadableAsset<Sprite>? ModifierIcon => LaunchpadAssets.BurstIcon;
+    public override Color FreeplayFileColor => new Color32(255, 77, 77, 255);
 
     public override string GetDescription() =>
         "When you die, players near you also explode!";

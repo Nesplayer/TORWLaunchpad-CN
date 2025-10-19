@@ -21,7 +21,6 @@ public class HitmanRole(IntPtr ptr) : ImpostorRole(ptr), IImpostorRole
     public CustomRoleConfiguration Configuration => new(this)
     {
         Icon = LaunchpadAssets.DeadlockButton,
-        OptionsScreenshot = LaunchpadAssets.JanitorBanner,
         UseVanillaKillButton = false,
     };
 
@@ -64,6 +63,7 @@ public class HitmanRole(IntPtr ptr) : ImpostorRole(ptr), IImpostorRole
 
     public override void SpawnTaskHeader(PlayerControl playerControl)
     {
+        playerControl.SpawnImpostorTaskHeader();
         overlay = GameObject.Find("DeadlockTint");
 
         if (overlay == null)

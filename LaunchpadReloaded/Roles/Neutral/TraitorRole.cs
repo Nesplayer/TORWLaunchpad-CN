@@ -155,6 +155,11 @@ public class TraitorRole(System.IntPtr ptr) : RoleBehaviour(ptr), INeutralRole
         // remove default task hint
     }
 
+    public override void SpawnTaskHeader(PlayerControl playerControl)
+        {
+            playerControl.SpawnNeutralTaskHeader();
+        }
+
     public override bool DidWin(GameOverReason reason)
     {
         return reason == CustomGameOver.GameOverReason<TraitorGameOver>();

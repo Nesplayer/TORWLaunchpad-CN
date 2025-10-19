@@ -13,6 +13,7 @@ public sealed class FlashModifier : LPModifier
     public override LoadableAsset<Sprite>? ModifierIcon => LaunchpadAssets.FlashIcon;
     public override int GetAssignmentChance() => (int)OptionGroupSingleton<UniversalModifierOptions>.Instance.FlashChance;
     public override int GetAmountPerGame() => (int)OptionGroupSingleton<FlashOptions>.Instance.FlashAmount;
+    public override Color FreeplayFileColor => Color.yellow;
 
     public override string GetDescription()
     {

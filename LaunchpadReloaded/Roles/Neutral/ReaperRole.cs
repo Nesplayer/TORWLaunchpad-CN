@@ -27,7 +27,6 @@ public class ReaperRole(System.IntPtr ptr) : RoleBehaviour(ptr), INeutralRole
         CanUseVent = false,
         GhostRole = (RoleTypes)RoleId.Get<OutcastGhostRole>(),
         Icon = LaunchpadAssets.SoulButton,
-        OptionsScreenshot = LaunchpadAssets.JesterBanner,
     };
 
     [HideFromIl2Cpp]
@@ -42,6 +41,11 @@ public class ReaperRole(System.IntPtr ptr) : RoleBehaviour(ptr), INeutralRole
     {
         // remove default task hint
     }
+
+    public override void SpawnTaskHeader(PlayerControl playerControl)
+        {
+            playerControl.SpawnNeutralTaskHeader();
+        }
 
     public override bool DidWin(GameOverReason reason)
     {

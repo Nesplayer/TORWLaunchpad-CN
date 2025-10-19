@@ -8,6 +8,8 @@ using LaunchpadReloaded.Utilities;
 using MiraAPI.Modifiers;
 using MiraAPI.Utilities;
 using MiraAPI.Utilities.Assets;
+using MiraAPI.Keybinds;
+using Rewired;
 using UnityEngine;
 using Helpers = MiraAPI.Utilities.Helpers;
 
@@ -24,7 +26,17 @@ public class HideButton : BaseLaunchpadButton<DeadBody>
     public override bool TimerAffectedByPlayer => true;
     public override bool AffectedByHack => true;
 
+    public override BaseKeybind Keybind => MiraGlobalKeybinds.SecondaryAbility;
+
     private static Vent VentTarget => HudManager.Instance.ImpostorVentButton.currentTarget;
+
+    public override void CreateButton(Transform parent)
+    {
+        base.CreateButton(parent);
+
+        Button!.usesRemainingSprite.sprite = LaunchpadAssets.Body.LoadAsset();
+        Button!.usesRemainingSprite.color = LaunchpadPalette.JanitorColor;
+    }
 
     public override DeadBody? GetTarget()
     {

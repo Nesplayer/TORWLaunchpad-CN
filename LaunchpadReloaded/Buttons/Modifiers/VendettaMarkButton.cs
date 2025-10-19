@@ -7,6 +7,8 @@ using MiraAPI.Modifiers;
 using MiraAPI.PluginLoading;
 using MiraAPI.Utilities;
 using MiraAPI.Utilities.Assets;
+using MiraAPI.Keybinds;
+using Rewired;
 using UnityEngine;
 
 namespace LaunchpadReloaded.Buttons.Modifiers;

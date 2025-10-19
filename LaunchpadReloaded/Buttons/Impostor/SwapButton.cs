@@ -4,6 +4,8 @@ using LaunchpadReloaded.Roles.Impostor;
 using MiraAPI.GameOptions;
 using MiraAPI.Hud;
 using MiraAPI.Utilities.Assets;
+using MiraAPI.Keybinds;
+using Rewired;
 using UnityEngine;
 
 namespace LaunchpadReloaded.Buttons.Impostor;
@@ -21,6 +23,14 @@ public class SwapButton : BaseLaunchpadButton
     public override bool Enabled(RoleBehaviour? role)
     {
         return role is SwapshifterRole;
+    }
+
+    public override void CreateButton(Transform parent)
+    {
+        base.CreateButton(parent);
+
+        Button!.usesRemainingSprite.sprite = LaunchpadAssets.Player.LoadAsset();
+        Button!.usesRemainingSprite.color = LaunchpadPalette.SwapperColor;
     }
 
     private PlayerControl? _currentTarget;

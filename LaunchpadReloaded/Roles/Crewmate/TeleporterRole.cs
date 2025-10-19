@@ -16,7 +16,10 @@ public class TeleporterRole(IntPtr ptr) : CrewmateRole(ptr), ICrewmateRole
 
     public CustomRoleConfiguration Configuration => new CustomRoleConfiguration(this)
     {
-        OptionsScreenshot = LaunchpadAssets.CaptainBanner,
         Icon = LaunchpadAssets.TeleportButton,
     };
+    public override void SpawnTaskHeader(PlayerControl playerControl)
+        {
+            playerControl.SpawnCrewmateTaskHeader();
+        }
 }

@@ -18,8 +18,12 @@ public class SealerRole(IntPtr ptr) : CrewmateRole(ptr), ICrewmateRole
     public CustomRoleConfiguration Configuration => new(this)
     {
         Icon = LaunchpadAssets.SealButton,
-        OptionsScreenshot = LaunchpadAssets.MedicBanner,
     };
+
+    public override void SpawnTaskHeader(PlayerControl playerControl)
+        {
+            playerControl.SpawnCrewmateTaskHeader();
+        }
 
     [HideFromIl2Cpp]
     public List<SealedVentComponent> SealedVents { get; } = [];

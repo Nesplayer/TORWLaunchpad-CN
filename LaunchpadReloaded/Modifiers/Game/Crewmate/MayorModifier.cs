@@ -12,6 +12,7 @@ public sealed class MayorModifier : LPModifier
 {
     public override string ModifierName => "Mayor";
     public override LoadableAsset<Sprite>? ModifierIcon => LaunchpadAssets.MayorIcon;
+    public override Color FreeplayFileColor => new Color32(155, 89, 182, 255);
     public override string GetDescription() =>
         $"You have an additional {OptionGroupSingleton<MayorOptions>.Instance.ExtraVotes} votes every meeting.";
 

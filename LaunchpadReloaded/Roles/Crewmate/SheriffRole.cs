@@ -16,6 +16,9 @@ public class SheriffRole(IntPtr ptr) : CrewmateRole(ptr), ICrewmateRole
     public CustomRoleConfiguration Configuration => new(this)
     {
         Icon = LaunchpadAssets.ShootButton,
-        OptionsScreenshot = LaunchpadAssets.SheriffBanner,
     };
+    public override void SpawnTaskHeader(PlayerControl playerControl)
+        {
+            playerControl.SpawnCrewmateTaskHeader();
+        }
 }

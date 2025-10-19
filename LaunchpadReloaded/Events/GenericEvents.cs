@@ -25,18 +25,6 @@ namespace LaunchpadReloaded.Events;
 public static class GenericEvents
 {
     [RegisterEvent]
-    public static void AfterMurderEvent(AfterMurderEvent @event)
-    {
-        var suspects = PlayerControl.AllPlayerControls.ToArray()
-            .Where(pc => pc != @event.Target && pc != @event.Source && !pc.Data.IsDead && pc.Data.Role is not DetectiveRole)
-            .Take((int)OptionGroupSingleton<DetectiveOptions>.Instance.SuspectCount)
-            .Append(@event.Source);
-
-        var deathData = new DeathData(DateTime.UtcNow, @event.Source, suspects);
-        @event.Target.GetModifierComponent().AddModifier(deathData);
-    }
-
-    [RegisterEvent]
     public static void SetRoleEvent(SetRoleEvent @event)
     {
         if (@event.Player.AmOwner && NotepadHud.Instance != null)
@@ -74,13 +62,6 @@ public static class GenericEvents
             IsLocallyVisible = (player) =>
             {
                 var plrRole = player.Data.Role;
-                var localHackedFlag = PlayerControl.LocalPlayer.HasModifier<HackedModifier>();
-                var playerHackedFlag = player.HasModifier<HackedModifier>();
-
-                if (localHackedFlag || playerHackedFlag)
-                {
-                    return false;
-                }
 
                 if (player.HasModifier<RevealedModifier>())
                 {
@@ -117,7 +98,7 @@ public static class GenericEvents
         {
             CustomGameOver.Trigger<JesterGameOver>([@event.ExileController.initData.networkedPlayer]);
         }
-        
+
         foreach (var plr in PlayerControl.AllPlayerControls)
         {
             var tagManager = plr.GetTagManager();
@@ -136,7 +117,7 @@ public static class GenericEvents
     [RegisterEvent]
     public static void ReportBodyEvent(ReportBodyEvent bodyEvent)
     {
-        if (HackerUtilities.AnyPlayerHacked() || bodyEvent.Reporter.HasModifier<DragBodyModifier>())
+        if (bodyEvent.Reporter.HasModifier<DragBodyModifier>())
         {
             bodyEvent.Cancel();
             return;
@@ -185,17 +166,6 @@ public static class GenericEvents
                 @event.Cancel();
                 return;
             }
-        }
-
-        if (PlayerControl.LocalPlayer.Data.IsHacked() && @event.IsPrimaryConsole && !@event.Usable.IsSabotageConsole())
-        {
-            @event.Cancel();
-            return;
-        }
-
-        if (HackerUtilities.AnyPlayerHacked() && !@event.Usable.IsSabotageConsole() && (@event.Usable.TryCast<SystemConsole>() || @event.Usable.TryCast<MapConsole>()))
-        {
-            @event.Cancel();
         }
     }
 }

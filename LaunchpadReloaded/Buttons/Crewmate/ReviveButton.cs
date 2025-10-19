@@ -8,6 +8,8 @@ using MiraAPI.GameOptions;
 using MiraAPI.Modifiers;
 using MiraAPI.Utilities;
 using MiraAPI.Utilities.Assets;
+using Rewired;
+using MiraAPI.Keybinds;
 using UnityEngine;
 using Helpers = MiraAPI.Utilities.Helpers;
 
@@ -30,6 +32,14 @@ public class ReviveButton : BaseLaunchpadButton<DeadBody>
     public override bool AffectedByHack => true;
 
     public override bool Enabled(RoleBehaviour? role) => role is MedicRole;
+
+    public override void CreateButton(Transform parent)
+    {
+        base.CreateButton(parent);
+
+        Button!.usesRemainingSprite.sprite = LaunchpadAssets.Body.LoadAsset();
+        Button!.usesRemainingSprite.color = LaunchpadPalette.MedicColor;
+    }
 
     public override void SetOutline(bool active)
     {

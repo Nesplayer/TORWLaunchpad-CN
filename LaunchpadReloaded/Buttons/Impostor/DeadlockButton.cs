@@ -6,6 +6,8 @@ using LaunchpadReloaded.Utilities;
 using MiraAPI.GameOptions;
 using MiraAPI.Utilities.Assets;
 using Reactor.Utilities;
+using MiraAPI.Keybinds;
+using Rewired;
 using UnityEngine;
 
 namespace LaunchpadReloaded.Buttons.Impostor;
@@ -19,7 +21,16 @@ public class DeadlockButton : BaseLaunchpadButton
     public override LoadableAsset<Sprite> Sprite => LaunchpadAssets.DeadlockButton;
     public override bool TimerAffectedByPlayer => true;
     public override bool AffectedByHack => false;
+
     public override bool Enabled(RoleBehaviour? role) => role is HitmanRole;
+
+    public override void CreateButton(Transform parent)
+    {
+        base.CreateButton(parent);
+
+        Button!.usesRemainingSprite.sprite = LaunchpadAssets.Player.LoadAsset();
+        Button!.usesRemainingSprite.color = LaunchpadPalette.HitmanColor;
+    }
 
     protected override void OnClick()
     {

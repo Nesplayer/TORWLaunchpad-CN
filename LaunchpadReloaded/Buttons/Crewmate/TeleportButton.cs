@@ -3,10 +3,11 @@ using LaunchpadReloaded.Options.Roles.Crewmate;
 using LaunchpadReloaded.Roles.Crewmate;
 using LaunchpadReloaded.Features;
 using MiraAPI.GameOptions;
-using MiraAPI.Hud;
+using MiraAPI.Keybinds;
 using MiraAPI.Utilities.Assets;
 using Reactor.Utilities;
 using UnityEngine;
+using Rewired;
 
 namespace LaunchpadReloaded.Buttons.Crewmate;
 
@@ -26,6 +27,14 @@ public class TeleportButton : BaseLaunchpadButton
     public override bool Enabled(RoleBehaviour? role)
     {
         return role is TeleporterRole;
+    }
+
+    public override void CreateButton(Transform parent)
+    {
+        base.CreateButton(parent);
+
+        Button!.usesRemainingSprite.sprite = LaunchpadAssets.Basic.LoadAsset();
+        Button!.usesRemainingSprite.color = LaunchpadPalette.TeleporterColor;
     }
 
     protected override void OnClick()

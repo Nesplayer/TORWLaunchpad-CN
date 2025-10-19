@@ -4,9 +4,11 @@ using LaunchpadReloaded.Options.Roles.Crewmate;
 using LaunchpadReloaded.Roles.Crewmate;
 using LaunchpadReloaded.Utilities;
 using MiraAPI.GameOptions;
+using MiraAPI.Keybinds;
 using MiraAPI.Utilities;
 using MiraAPI.Utilities.Assets;
 using UnityEngine;
+using Rewired;
 using Helpers = MiraAPI.Utilities.Helpers;
 
 namespace LaunchpadReloaded.Buttons.Crewmate;
@@ -21,6 +23,14 @@ public class FreezeButton : BaseLaunchpadButton<DeadBody>
     public override float Distance => PlayerControl.LocalPlayer.MaxReportDistance / 4f;
     public override bool TimerAffectedByPlayer => true;
     public override bool AffectedByHack => true;
+
+    public override void CreateButton(Transform parent)
+    {
+        base.CreateButton(parent);
+
+        Button!.usesRemainingSprite.sprite = LaunchpadAssets.Body.LoadAsset();
+        Button!.usesRemainingSprite.color = LaunchpadPalette.CoronerColor;
+    }
 
     public override bool Enabled(RoleBehaviour? role)
     {

@@ -17,12 +17,6 @@ public static class ColorblindTextPatch
 
         var plr = GameData.Instance.GetPlayerById(comp.playerId);
 
-        if (plr.IsHacked())
-        {
-            __result = "???";
-            return false;
-        }
-
         if (!comp.GradientEnabled)
         {
             return true;

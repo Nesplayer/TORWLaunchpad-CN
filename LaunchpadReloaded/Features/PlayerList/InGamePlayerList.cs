@@ -1,4 +1,5 @@
-﻿using System;
+﻿/*
+using System;
 using HarmonyLib;
 using MiraAPI.Events;
 using MiraAPI.Events.Vanilla.Gameplay;
@@ -57,3 +58,4 @@ public static class InGamePlayerList
         }
     }
 }
+*/

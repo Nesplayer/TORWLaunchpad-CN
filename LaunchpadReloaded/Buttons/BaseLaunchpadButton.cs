@@ -1,6 +1,8 @@
 ﻿using LaunchpadReloaded.Features;
 using LaunchpadReloaded.Utilities;
+using MiraAPI.LocalSettings;
 using MiraAPI.Hud;
+using MiraAPI.Keybinds;
 using MiraAPI.PluginLoading;
 using UnityEngine;
 
@@ -9,19 +11,18 @@ namespace LaunchpadReloaded.Buttons;
 [MiraIgnore]
 public abstract class BaseLaunchpadButton : CustomActionButton
 {
-    public override ButtonLocation Location => LaunchpadSettings.Instance?.ButtonLocation.Enabled == true
-        ? ButtonLocation.BottomLeft
-        : ButtonLocation.BottomRight;
+    public override ButtonLocation Location => LocalSettingsTabSingleton<LaunchpadSettings>.Instance.ButtonLocation.Value;
 
     public abstract bool TimerAffectedByPlayer { get; }
 
     public abstract bool AffectedByHack { get; }
 
+    public override BaseKeybind Keybind => MiraGlobalKeybinds.PrimaryAbility;
+
     public override bool CanUse()
     {
         var buttonTimer = !TimerAffectedByPlayer || PlayerControl.LocalPlayer.ButtonTimerEnabled();
-        var hack = !AffectedByHack || !PlayerControl.LocalPlayer.Data.IsHacked();
-        return base.CanUse() && PlayerControl.LocalPlayer.CanMove && buttonTimer && hack;
+        return base.CanUse() && PlayerControl.LocalPlayer.CanMove && buttonTimer;
     }
 }
 
@@ -33,6 +34,8 @@ public abstract class BaseLaunchpadButton<T> : CustomActionButton<T> where T : M
     public abstract bool TimerAffectedByPlayer { get; }
 
     public abstract bool AffectedByHack { get; }
+    
+    public override BaseKeybind Keybind => MiraGlobalKeybinds.PrimaryAbility;
 
     public override void ResetTarget()
     {
@@ -43,7 +46,6 @@ public abstract class BaseLaunchpadButton<T> : CustomActionButton<T> where T : M
     public override bool CanUse()
     {
         var buttonTimer = !TimerAffectedByPlayer || PlayerControl.LocalPlayer.ButtonTimerEnabled();
-        var hack = !AffectedByHack || !PlayerControl.LocalPlayer.Data.IsHacked();
-        return base.CanUse() && PlayerControl.LocalPlayer.CanMove && buttonTimer && hack;
+        return base.CanUse() && PlayerControl.LocalPlayer.CanMove && buttonTimer;
     }
 }

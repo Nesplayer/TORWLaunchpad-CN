@@ -5,6 +5,8 @@ using LaunchpadReloaded.Roles.Impostor;
 using LaunchpadReloaded.Utilities;
 using MiraAPI.GameOptions;
 using MiraAPI.Utilities.Assets;
+using MiraAPI.Keybinds;
+using Rewired;
 using System.Linq;
 using UnityEngine;
 
@@ -25,6 +27,14 @@ public class DigButton : BaseLaunchpadButton
     public override bool Enabled(RoleBehaviour? role)
     {
         return role is BurrowerRole;
+    }
+
+    public override void CreateButton(Transform parent)
+    {
+        base.CreateButton(parent);
+
+        Button!.usesRemainingSprite.sprite = LaunchpadAssets.Vent.LoadAsset();
+        Button!.usesRemainingSprite.color = LaunchpadPalette.BurrowerColor;
     }
 
     public override bool CanUse()

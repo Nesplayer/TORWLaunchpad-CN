@@ -23,7 +23,7 @@ public class NeutralKillerRole(System.IntPtr ptr) : RoleBehaviour(ptr), INeutral
     public CustomRoleConfiguration Configuration => new(this)
     {
         TasksCountForProgress = false,
-        CanUseVent = OptionGroupSingleton<JesterOptions>.Instance.CanUseVents,
+        CanUseVent = OptionGroupSingleton<NeutralKillerOptions>.Instance.CanUseVents,
         GhostRole = (RoleTypes)RoleId.Get<OutcastGhostRole>(),
         Icon = LaunchpadAssets.NeutralKillerIcon,
     };

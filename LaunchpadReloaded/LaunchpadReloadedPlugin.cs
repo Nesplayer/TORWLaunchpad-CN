@@ -15,7 +15,7 @@ using Reactor.Utilities;
 
 namespace LaunchpadReloaded;
 
-[BepInAutoPlugin("dev.xtracube.launchpad", "TOR-W: L")]
+[BepInAutoPlugin("mod.angel.launchpad", "TOR-W: L", "2.0.0-r")]
 [BepInProcess("Among Us.exe")]
 [BepInDependency(ReactorPlugin.Id)]
 [BepInDependency(MiraApiPlugin.Id)]
@@ -53,8 +53,6 @@ public partial class LaunchpadReloadedPlugin : BasePlugin, IMiraPlugin
 
         IL2CPPChainloader.Instance.Finished +=
             ModNewsFetcher.CheckForNews;
-
-        LaunchpadSettings.Initialize();
 
         Config.Save();
     }

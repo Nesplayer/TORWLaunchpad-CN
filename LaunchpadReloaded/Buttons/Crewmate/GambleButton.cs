@@ -5,10 +5,12 @@ using LaunchpadReloaded.Modifiers;
 using LaunchpadReloaded.Options.Roles.Crewmate;
 using LaunchpadReloaded.Roles.Crewmate;
 using MiraAPI.GameOptions;
+using MiraAPI.Keybinds;
 using MiraAPI.Modifiers;
 using MiraAPI.Networking;
 using MiraAPI.Utilities;
 using MiraAPI.Utilities.Assets;
+using Rewired;
 using UnityEngine;
 
 namespace LaunchpadReloaded.Buttons.Crewmate;
@@ -27,6 +29,14 @@ public class GambleButton : BaseLaunchpadButton<PlayerControl>
     public override PlayerControl? GetTarget()
     {
         return PlayerControl.LocalPlayer.GetClosestPlayer(true, 1.1f);
+    }
+
+    public override void CreateButton(Transform parent)
+    {
+        base.CreateButton(parent);
+
+        Button!.usesRemainingSprite.sprite = LaunchpadAssets.Player.LoadAsset();
+        Button!.usesRemainingSprite.color = LaunchpadPalette.GamblerColor;
     }
 
     public override bool CanUse()

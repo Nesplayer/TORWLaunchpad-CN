@@ -10,6 +10,7 @@ namespace LaunchpadReloaded.Modifiers.Game.Crewmate;
 public sealed class TorchModifier : LPModifier
 {
     public override string ModifierName => "Torch";
+    public override Color FreeplayFileColor => new Color32(255, 127, 50, 255);
     public override LoadableAsset<Sprite>? ModifierIcon => LaunchpadAssets.TorchIcon;
     public override string GetDescription() => 
         OptionGroupSingleton<TorchOptions>.Instance.UseFlashlight

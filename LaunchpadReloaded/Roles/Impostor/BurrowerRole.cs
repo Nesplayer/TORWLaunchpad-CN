@@ -17,7 +17,6 @@ public class BurrowerRole(IntPtr ptr) : ImpostorRole(ptr), IImpostorRole
     public CustomRoleConfiguration Configuration => new(this)
     {
         Icon = LaunchpadAssets.DigVentButton,
-        OptionsScreenshot = LaunchpadAssets.HackerBanner,
     };
 
     [HideFromIl2Cpp]

@@ -15,6 +15,9 @@ public class CoronerRole(IntPtr ptr) : CrewmateRole(ptr), ICrewmateRole
     public CustomRoleConfiguration Configuration => new(this)
     {
         Icon = LaunchpadAssets.FreezeButton,
-        OptionsScreenshot = LaunchpadAssets.CaptainBanner,
     };
+    public override void SpawnTaskHeader(PlayerControl playerControl)
+        {
+            playerControl.SpawnCrewmateTaskHeader();
+        }
 }

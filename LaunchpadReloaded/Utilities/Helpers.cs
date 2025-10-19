@@ -13,7 +13,7 @@ public static class Helpers
 
     public static bool ShouldCancelClick()
     {
-        return PlayerControl.LocalPlayer.HasModifier<DragBodyModifier>() || PlayerControl.LocalPlayer.GetModifier<HackedModifier>() is { DeActivating: false };
+        return PlayerControl.LocalPlayer.HasModifier<DragBodyModifier>();
     }
 
     public static PlayerControl? GetPlayerToPoint(Vector3 position)

@@ -14,7 +14,7 @@ public sealed class ExecutionerGameOver : CustomGameOver
 
     public override void AfterEndGameSetup(EndGameManager endGameManager)
     {
-        endGameManager.WinText.text = "<size=80%>Executioner Wins!</size>";
+        endGameManager.WinText.text = "Executioner Wins!";
         endGameManager.WinText.color = LaunchpadPalette.ExecutionerColor;
         endGameManager.BackgroundBar.material.SetColor(ShaderID.Color, LaunchpadPalette.ExecutionerColor);
     }
