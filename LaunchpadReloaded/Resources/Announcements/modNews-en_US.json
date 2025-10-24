@@ -126,6 +126,31 @@
         "\n★ Giant modifier making player go out of boundaries when climbing up ladders.",
         "\n\n♦♦ Thank you for downloading and playing TOR-W: L! ♦♦"
       ]
+    },
+    {
+      "Date": "2025-10-24T12:50:00Z",
+      "Number": "100007",
+      "ShortTitle": "★ TOR-W: L v2.0-r ★",
+      "SubTitle": "Newest Updates & Features",
+      "Title": "TOR-W: Launchpad v2.0-r",
+      "Text": [
+        "\n\n<b>└ Added ┐</b>:",
+        "\n★ Added TOR-W: L to Starlight for mobile players.",
+        "\n\n<b>└ Work In Progress ┐</b>:",
+        "\n★ TOR-W: L Launcher (Idea from All Of Us server).",
+        "\n\n<b>└ Changes ┐</b>:",
+        "\n★ Changed the versioning from v1.2.0 to v2.0-r (more info in the <link=https://discord.gg/HczqtuBfcu>Discord</link> server).",
+        "\n\n<b>└ Planned ┐</b>:",
+        "\n★ In-Game Wiki (Idea from Town Of Us: Mira).",
+        "\n★ Translations (Idea given from @WanderingPix).",
+        "\n\n<b>└ Removed ┐</b>:",
+        "\n★ Removed the Hacker role.",
+        "\n★ Removed the Captain role.",
+        "\n★ Removed the Smol modifier.",
+        "\n★ Removed the Giant modifier.",
+        "\n★ Removed the Gravity Field modifier.",
+        "\n\n♦♦ Thank you for downloading and playing TOR-W: L! ♦♦"
+      ]
     }
   ]
 }
