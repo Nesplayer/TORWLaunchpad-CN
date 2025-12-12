@@ -203,33 +203,6 @@
         "\n★ Translations from v2.2-r (Idea given from @WanderingPix).",
         "\n\n♦♦ Thank you for downloading and playing TOR-W: L! ♦♦"
       ]
-    },
-    {
-      "Date": "2026-12-12T12:50:00Z",
-      "Number": "100010",
-      "ShortTitle": "★ TOR-W: L v3.0-r ★",
-      "SubTitle": "New Release!",
-      "Title": "TOR-W: Launchpad v3.0-r",
-      "Text": [
-        "\n\n<b>└ Added ┐</b>:",
-        "\n★ Added <b>8 NEW ROLES</b>!\nThey are:\n♦ Scribe (<color=#963CC8FF>Coven</color>).\n♦ Potionist (Coven).\n♦ Medic Lite (Crewmate).\n♦ Pyromaniac(Neutral).\n♦ Bomber (Impostor).\n♦ Grenadier (Impostor).\n♦ Time Rewinder (Crewmate).\n♦ Copycat (Neutral).",
-        "\n★ Added <b>6 NEW MODIFIERS</b>!\nThey are:\n♦ Lucky (Universal).\n♦ Chameleon (Universal).\n♦ Guardian's Touch (Crewmate).\n♦ Shadow Kill (Impostor).\n♦ Surge (Impostor).\n♦ Rune-Bound (Coven).",
-        "\n★ Added role icons next to names in-game.",
-        "\n★ Added a description for the Modifiers button.",
-        "\n★ Added descriptions for settings.",
-        "\n★ Added a Coven folder exclusive to TOR-W: L.",
-        "\n★ Added Color Chat Bubbles (Credit to @WanderingPix).",
-        "\n★ Added Auto-Starting, a big upgrade for those who wait!.",
-        "\n\n<b>└ Removed ┐</b>:",
-        "\n★ Removed Vendetta Modifier.",
-        "\n\n<b>└ Changes ┐</b>:",
-        "\n★ Changed the colors of the modifier names.",
-        "\n\n<b>└ Finished ┐</b>:",
-        "\n★ TOR-W: L Launcher (Idea from All Of Us server).",
-        "\n\n<b>└ Planned ┐</b>:",
-        "\n★ Translations coming soon FULLY! (Idea given from @WanderingPix).",
-        "\n\n♦♦ Thank you for downloading and playing TOR-W: L! ♦♦"
-      ]
     }
   ]
 }
