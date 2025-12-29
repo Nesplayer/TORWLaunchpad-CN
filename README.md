@@ -18,10 +18,10 @@ Here are a couple of them:
 - ✅ Exciting Gamemodes
 
 ## 🔧 Compatibility
-- ✔️ Supports 2025.11.18 (17.1.0) on PC.
-- 🌟 Will support **Starlight** in the near future.
-- ❗️ TOR-W: Launchpad is **NOT** a host-only mod. Every player needs to install it to enjoy.
-- 🔒 TOR-W: Launchpad does **NOT** work on normal Among Us servers. We host our own private game servers instead, or use [Modded/Niko](https://torw-l.vercel.app/servers) regions.
+- ✔️ 支持电脑端Among Us版本2025.11.18（17.1.0
+- 🌟 将来会支持**星光** 
+- ❗️ TOR-W：Launchpad不是**NOT**一个 a host-only mod. Every player needs to install it to enjoy.
+- 🔒 TOR-W: Launchpad**不能**在 work on normal Among Us servers. We host our own private game servers instead, or use [Modded/Niko](https://torw-l.vercel.app/servers) regions.
 
 ## 📥 Installation
 
